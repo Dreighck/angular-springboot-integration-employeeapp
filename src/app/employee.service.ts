@@ -18,7 +18,9 @@ export class EmployeeService {
     return this.httpClient.post<Employee>("http://localhost:9000/api/v1/employees",employee);
   }
 
-  updateEmployee(){}
+  updateEmployee(employee :Employee): Observable<Employee>{
+    return this.httpClient.put<Employee>("http://localhost:9000/api/v1/employees",employee);
+  }
 
   getEmployeeById(){}
 

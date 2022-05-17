@@ -14,11 +14,25 @@ import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatButtonModule} from '@angular/material/button';
 import { FormsModule } from '@angular/forms';
+import { LoginComponent } from './login/login.component';
+import { HomeComponent } from './home/home.component';
+import { SignupComponent } from './signup/signup.component';
+import {RouterModule, Routes} from "@angular/router";
+
+const routes: Routes =[
+  {path:'dashboard',component:DashboardComponent},
+  {path:'login',component: LoginComponent},
+  {path: 'home',component: HomeComponent},
+  {path: 'signup',component: SignupComponent}
+]
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    DashboardComponent
+    DashboardComponent,
+    LoginComponent,
+    HomeComponent,
+    SignupComponent
   ],
   imports: [
     BrowserModule,
@@ -29,8 +43,9 @@ import { FormsModule } from '@angular/forms';
     MatInputModule,
     MatFormFieldModule,
     MatButtonModule,
-    FormsModule
-    
+    FormsModule,
+    RouterModule.forRoot(routes)
+
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -18,7 +18,7 @@
       </mat-form-field>
       <mat-form-field appearance="outline">
         <mat-label>Employee Salary</mat-label>
-        <input matInput placeholder="Enter the Salary"[(ngModel)]="employee.salary" >
+        <input matInput placeholder="Enter the Salary" [(ngModel)]="employee.salary" >
       </mat-form-field>
     <button (click)="add()" mat-raised-button color="primary">Add Employee</button>
 </div>
@@ -32,7 +32,7 @@
               <mat-card-title>{{employee.firstName}}</mat-card-title>
               <mat-card-subtitle>{{employee.designation}}</mat-card-subtitle>
             </mat-card-header>
-           
+
             <mat-card-content>
               <p>
                   {{employee.firstName}} is working as a {{employee.designation}} in Stackroute
@@ -43,4 +43,6 @@
           </mat-card>
     </div>
 </div>
+
+
 
