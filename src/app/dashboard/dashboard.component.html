@@ -1,0 +1,46 @@
+
+
+<!-- add a new employee -->
+
+<div class="form-container">
+    <p>{{this.errorMessage}}</p>
+    <mat-form-field appearance="outline">
+        <mat-label>Employee ID</mat-label>
+        <input matInput placeholder="Enter the Employee ID" [(ngModel)]="employee.id">
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>Employee Name</mat-label>
+        <input matInput placeholder="Enter the Employee Name" [(ngModel)]="employee.firstName">
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>Employee Designation</mat-label>
+        <input matInput placeholder="Enter the Designation" [(ngModel)]="employee.designation">
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>Employee Salary</mat-label>
+        <input matInput placeholder="Enter the Salary"[(ngModel)]="employee.salary" >
+      </mat-form-field>
+    <button (click)="add()" mat-raised-button color="primary">Add Employee</button>
+</div>
+
+<!-- display all employees -->
+<div class="card-container">
+    <div *ngFor="let employee of employees">
+
+        <mat-card class="employee-card">
+            <mat-card-header>
+              <mat-card-title>{{employee.firstName}}</mat-card-title>
+              <mat-card-subtitle>{{employee.designation}}</mat-card-subtitle>
+            </mat-card-header>
+           
+            <mat-card-content>
+              <p>
+                  {{employee.firstName}} is working as a {{employee.designation}} in Stackroute
+              </p>
+            </mat-card-content>
+            <mat-card-actions>
+            </mat-card-actions>
+          </mat-card>
+    </div>
+</div>
+
